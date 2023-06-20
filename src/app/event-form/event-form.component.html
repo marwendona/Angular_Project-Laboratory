@@ -1,0 +1,23 @@
+
+<form [formGroup]="range" (ngSubmit)="Onadd()">
+    <mat-form-field>
+        <mat-label>titre</mat-label>
+        <input matInput formControlName="titre">
+      </mat-form-field>
+    <br>
+    <mat-form-field appearance="fill">
+    <mat-label>Enter a date range</mat-label>
+    <mat-date-range-input  [rangePicker]="picker">
+      <input matStartDate formControlName="date_deb" placeholder="Start date">
+      <input matEndDate formControlName="date_fin" placeholder="End date">
+    </mat-date-range-input>
+    <mat-hint>MM/DD/YYYY – MM/DD/YYYY</mat-hint>
+
+    <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+    <mat-date-range-picker #picker></mat-date-range-picker>
+  
+  </mat-form-field>
+  
+  <p>Selected range: {{range.value | json}}</p>
+  <button type="submit"> ok </button>
+</form>

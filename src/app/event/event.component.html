@@ -1,0 +1,40 @@
+
+<button routerLink="/event/create"> create new</button>
+
+
+<table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
+
+    <!--- Note that these columns can be defined in any order.
+          The actual rendered columns are set as a property on the row definition" -->
+  
+   
+  
+    <ng-container matColumnDef="titre">
+      <th mat-header-cell *matHeaderCellDef> titre </th>
+      <td mat-cell *matCellDef="let element"> {{element.titre}} </td>
+    </ng-container>
+  
+    <ng-container matColumnDef="date_deb">
+      <th mat-header-cell *matHeaderCellDef> date_deb </th>
+      <td mat-cell *matCellDef="let element"> {{element.date_deb | date:"dd/MM/yyyy"}} </td>
+    </ng-container>
+
+    <ng-container matColumnDef="date_fin">
+        <th mat-header-cell *matHeaderCellDef> date_fin </th>
+        <td mat-cell *matCellDef="let element"> {{element.date_fin | date:"dd/MM/yyyy"}} </td>
+      </ng-container>
+
+      <ng-container matColumnDef="Action">
+        <th mat-header-cell *matHeaderCellDef> </th>
+        <td mat-cell *matCellDef="let element"> 
+            <button (click)="open(element.id)" ><mat-icon >visibility</mat-icon> </button>
+       
+          <button (click)="open(element.id)" ><mat-icon >edit</mat-icon> </button>
+          <button (click)="delete(element.id)"><mat-icon >delete</mat-icon></button>
+
+      </td>
+      </ng-container>
+
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+  </table>

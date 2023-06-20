@@ -1,0 +1,69 @@
+<mat-sidenav-container>
+
+  <!-- The side nav -->
+  <mat-sidenav #drawer fixedInViewport="true" mode="over" opened="false" style="width: 230px;">
+    <mat-toolbar color="primary" fxLayout fxLayoutGap="16px">
+      <mat-icon>school</mat-icon>
+      <span> Laboratoire </span>
+    </mat-toolbar>
+    <mat-nav-list>
+      <a mat-list-item routerLink="/dash">Dashboard</a>
+      <a mat-list-item  routerLink="/members">Members</a>
+      <a mat-list-item  routerLink="/tools">Tools</a>
+      <a mat-list-item  routerLink="/articles">Articles</a>
+      <a mat-list-item  routerLink="/events">Events</a>
+    </mat-nav-list>
+  </mat-sidenav>
+  <!-- EO: Side nav-->
+
+  <!-- Side nav content-->
+  <mat-sidenav-content>
+    <mat-toolbar color="primary" style="flex-direction: row; box-sizing: border-box; display: flex;">
+      <div fxFlex fxLayout fxLayoutAlign="start center" style="flex-direction: row; box-sizing: border-box; display: flex; flex: 1 1 0%; place-content: center flex-start; align-items: center;">
+        <button type="button" aria-label="Toggle sidenav" class="toolbar-button"
+                mat-icon-button (click)="drawer.toggle()">
+                
+          <mat-icon aria-label="Side nav toggle icon">menu</mat-icon>
+          
+        </button>
+        <div >Lab</div>
+        
+        <div fxFlex></div>
+
+        <div class="toolbar-separator">
+
+        <button [matMenuTriggerFor]="userMenu" class="toolbar-button" mat-button >
+          <div fxLayout="row" fxLayoutAlign="center center">
+            
+               <img class="avatar mr-0 mr-sm-16" src="{{user?.photoURL}}" style="border-radius: 50px; width: 40px;height: 40px;"/>
+           
+            <span class="username mx-12" fxHide fxShow.gt-sm>{{user?.displayName}} </span>
+            <mat-icon class="s-16" fxHide.xs>keyboard_arrow_down</mat-icon>
+          </div>
+        </button>
+
+         <mat-menu #userMenu="matMenu" [overlapTrigger]="false">
+
+          <button class="" mat-menu-item>
+            <mat-icon>account_box</mat-icon>
+            <span>Profile</span>
+          </button>
+          <button (click)="doLogout()" class="" mat-menu-item>
+            <mat-icon>exit_to_app</mat-icon>
+            <span >Logout</span>
+          </button>
+
+        </mat-menu>
+      </div>
+      </div>
+    </mat-toolbar>
+
+    <div class="content mt-80 mx-16">
+      <router-outlet></router-outlet>
+
+    </div>
+
+  </mat-sidenav-content>
+  <!-- EO: Side nav content-->
+
+</mat-sidenav-container>

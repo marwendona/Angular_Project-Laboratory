@@ -1,0 +1,12 @@
+<h4>mat-select</h4>
+  <mat-form-field appearance="fill">
+    <mat-label>selected member</mat-label>
+    <mat-select [(ngModel)]="selectedValue">
+      <mat-option *ngFor="let element of tab" [value]="element.id">
+        {{element.name}}
+      </mat-option>
+    </mat-select>
+  </mat-form-field>
+  <p> Selected member: {{selectedValue}} </p>
+
+  <button (click)="add(selectedValue)">ok</button>

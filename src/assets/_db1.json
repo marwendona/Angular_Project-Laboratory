@@ -1,0 +1,72 @@
+{
+"members":[
+    {
+    "id":"1234",
+    "cin":"1245678",
+    "name":"walid",
+    "createdDate":"12/2/2008",
+    "cv":"lien",
+    "type":"student"
+  },
+  {
+    "id":"12345",
+    "cin":"1245678",
+    "name":"salah",
+    "createdDate":"12/2/2008",
+    "cv":"lien",
+    "type":"student"
+  },
+  {"id":"123456",
+  "cin":"1245678",
+  "name":"imen",
+  "createdDate":"12/2/2008",
+  "cv":"lien",
+  "type":"student"}
+]
+,
+"events":[
+  {
+    "id":"12",
+  "titre":"aaa",
+  "date_deb":"12/4/2020",
+  "date_fin":"12/4/2022"
+},
+{
+  "id":"34",
+  "titre":"bbb",
+  "date_deb":"12/4/2020",
+  "date_fin":"12/4/2022"
+}
+]
+,
+"articles":[
+  {
+  "id":"1234",
+  "titre":"aa",
+  "type":"a",
+  "dateApparition":"12/12/2000",
+  "sourcePdf":"lien",
+  "auteur":"",
+  "link":"DOI"
+},
+{
+  "id":"12345",
+  "titre":"bb",
+  "type":"b",
+  "dateApparition":"12/12/2000",
+  "sourcePdf":"lien",
+  "auteur":"",
+  "link":"DOI"
+},
+{
+"id":"12346",
+"titre":"cc",
+"type":"c",
+"dateApparition":"12/12/2000",
+"sourcePdf":"lien",
+"auteur":"",
+"link":"DOI"
+}
+]
+
+}

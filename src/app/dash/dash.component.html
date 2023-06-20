@@ -1,0 +1,50 @@
+<div fxLayout="row" fxLayoutAlign="space-around center" > <!--avec flex layout-->
+
+  <mat-card class="a">
+  <mat-card-header>
+    <mat-card-title>members</mat-card-title>
+    <mat-card-subtitle>{{members}}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+
+<mat-card class="b">
+  <mat-card-header>
+    <mat-card-title>events</mat-card-title>
+    <mat-card-subtitle>{{events}}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+
+<mat-card class="c">
+  <mat-card-header>
+    <mat-card-title>articles</mat-card-title>
+    <mat-card-subtitle>{{articles}}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+
+<mat-card class="d">
+  <mat-card-header>
+    <mat-card-title>tools</mat-card-title>
+    <mat-card-subtitle>{{tools}}</mat-card-subtitle>
+  </mat-card-header>
+</mat-card>
+</div>
+
+<div class="chart-wrapper">
+  <canvas  baseChart
+          [type]="'line'"
+    [datasets]="chartData"
+    [labels]="chartLabels"
+    [options]="chartOptions"
+    >
+  </canvas>
+</div>
+<div class="chart-wrapper">
+
+  <canvas  baseChart
+          [type]="'pie'"
+    [datasets]="chartDataPie"
+    [labels]="chartLabelsPie"
+    [options]="chartOptions"
+    >
+  </canvas>
+</div>
