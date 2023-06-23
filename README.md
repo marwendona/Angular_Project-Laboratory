@@ -1,27 +1,38 @@
-# First
+# Laboratory Website
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 15.1.3.
+This repository contains the source code for a laboratory website built using Angular, TypeScript, HTML, and CSS.
 
-## Development server
+## Overview
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+The Laboratory website is designed to showcase information about a laboratory and its activities. It provides users with a platform to explore various services, projects, research areas, and contact details related to the laboratory.
 
-## Code scaffolding
+## Features
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+- **Home**: A landing page that introduces the laboratory and highlights its key features.
+- **Services**: An overview of the services provided by the laboratory.
+- **Projects**: Details about ongoing and completed projects undertaken by the laboratory.
+- **Research Areas**: Information about the different research areas focused on by the laboratory.
+- **Contact**: A contact form and contact details for users to get in touch with the laboratory.
 
-## Build
+## Technologies Used
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+The website is built using the following technologies:
 
-## Running unit tests
+- **Angular**: A popular framework for building web applications.
+- **TypeScript**: A statically typed superset of JavaScript that adds additional features and syntax to the language.
+- **HTML**: The standard markup language for creating web pages.
+- **CSS**: The style sheet language used for designing the website's appearance.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+## Getting Started
 
-## Running end-to-end tests
+To run the Laboratory website locally, follow these steps:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+1. Clone this repository
+2. Navigate to the project directory
+3. Install the required dependencies: `npm install`
+4. Start the development server: `ng serve`
+5. Open your web browser and visit `http://localhost:4200` to access the website.
 
-## Further help
+## Contributing
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+Contributions to this project are welcome. If you find any issues or would like to suggest improvements, please open a new issue or submit a pull request.
